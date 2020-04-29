@@ -54,6 +54,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == ADD_CONTACT_REQUEST_CODE) {
+            // Ways to deal with nullable "data"
+            // 1. Force cast !!
+            // 2. Guarded call ? and provide default value with ?:
+            // 3. Null check on the data
             if (resultCode == Activity.RESULT_OK && data != null) {
                 val personName = data.getStringExtra("name")
                 val personAge = data.getIntExtra("age", -1)

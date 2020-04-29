@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--  Make sure to list all activities here   -->
         <activity android:name=".AddContactActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
